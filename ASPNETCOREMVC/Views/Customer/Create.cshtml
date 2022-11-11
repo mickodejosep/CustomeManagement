@@ -1,0 +1,30 @@
+﻿@model Customer
+
+<h1>Create View</h1>
+<hr />
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <form method="post" asp-controller="Customer" asp-action="CreateCustomer">
+                <div class="card-header">
+                    <h3>New Customer Form</h3>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Enter Name:</label>
+                        <input asp-for=CustomerName type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Enter Age:</label>
+                        <input asp-for=CustomerAge type="number" class="form-control" id="formGroupExampleInput2" placeholder="Enter Age">
+                    </div>
+                </div>
+                <input type="hidden" asp-for="Id" />
+                <div class="card-footer">
+                    <button class="btn-sm btn-primary" type="submit"> Save</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@*@model ASPNETCOREMVC.Models.Customer*@
+@model List<ASPNETCOREMVC.Models.Customer>
+
+
+<h1>Hi Customer! This view used the Customer Controller </h1>
+<p>This is a Customer View Index</p>
+
+@*   <label> Customer Age: </label> @Model.CustomerAge
+
+    <input type="hidden" value="@Model.Id" />*@
+
+<ul>
+    @foreach (var customer in Model)
+    {
+        <li>@customer.Id | @customer.CustomerName | @customer.CustomerAge yr(s) old</li>
+
+    }
+</ul>
+
+
